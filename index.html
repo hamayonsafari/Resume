@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamayon Safari - Network Engineer CV</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- AOS CSS for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a; /* Tailwind slate-900 */
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,0.1) 0, transparent 50%);
+            background-attachment: fixed;
+            color: #e2e8f0;
+        }
+
+        /* Tech-style font for specific items */
+        .font-tech { font-family: 'Fira Code', monospace; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #60a5fa; }
+
+        /* Glowing text effect for name */
+        .text-glow {
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.5), 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Blinking cursor for typing effect */
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: #38bdf8;
+            margin-left: 2px;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        /* Rotating border for profile picture */
+        .profile-border {
+            position: relative;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #3b82f6);
+            background-size: 200% 200%;
+            animation: gradient-rotate 3s ease infinite;
+            padding: 4px;
+            border-radius: 50%;
+        }
+        @keyframes gradient-rotate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen p-4 md:p-8 lg:py-12 selection:bg-cyan-500 selection:text-white">
+
+    <!-- Main Container -->
+    <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-[0_0_50px_-12px_rgba(6,182,212,0.3)] glass z-10 relative">
+
+        <!-- Sidebar / Left Column -->
+        <aside class="w-full lg:w-1/3 p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-slate-700/50 flex flex-col bg-slate-900/50">
+            
+            <!-- Profile Section -->
+            <div class="text-center mb-10" data-aos="fade-down" data-aos-duration="1000">
+                <!-- Animated Profile Picture -->
+                <div class="w-40 h-40 mx-auto profile-border mb-6 shadow-[0_0_30px_rgba(56,189,248,0.4)]">
+                    <img src="./WhatsApp Image 2026-09-25 at 1.14.26 PM.jpeg" alt="Hamayon Safari" class="w-full h-full object-cover rounded-full border-4 border-slate-900" onerror="this.src='https://placehold.co/400x400/1e293b/38bdf8?text=HS'">
+                </div>
+                
+                <!-- Glowing Name -->
+                <h1 class="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-glow">
+                    Hamayon Safari
+                </h1>
+                
+                <!-- Typing Effect Container -->
+                <div class="h-8 flex items-center justify-center text-cyan-300 font-semibold tracking-widest uppercase text-sm font-tech">
+                    <span id="typing-text"></span><span class="cursor">&nbsp;</span>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="mb-10" data-aos="fade-right" data-aos-delay="200">
+                <h2 class="text-sm font-bold uppercase text-slate-400 tracking-widest mb-5 flex items-center">
+                    <i class="fas fa-address-card mr-3 text-cyan-500"></i> Contact Info
+                </h2>
+                <ul class="space-y-4 text-sm text-slate-300">
+                    <li class="flex items-center group">
+                        <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center mr-4 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
+                            <i class="fas fa-map-marker-alt text-lg"></i>
+                        </div>
+                        <span>Kabul, Afghanistan</span>
+                    </li>
+                    <li class="flex items-center group">
+                        <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center mr-4 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
+                            <i class="fas fa-phone-alt text-lg"></i>
+                        </div>
+                        <span>+93 795 022 996</span>
+                    </li>
+                    <li class="flex items-center group">
+                        <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center mr-4 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </div>
+                        <a href="mailto:Hamayonsafari236@gmail.com" class="hover:text-cyan-400 transition-colors">Hamayonsafari905@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="mb-10" data-aos="fade-right" data-aos-delay="300">
+                 <h2 class="text-sm font-bold uppercase text-slate-400 tracking-widest mb-5 flex items-center">
+                    <i class="fas fa-hashtag mr-3 text-cyan-500"></i> Social Media
+                </h2>
+                <div class="flex gap-4">
+                    <a href="https://wa.me/93711422667" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-green-400 hover:bg-green-500 hover:text-white hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="https://t.me/@HamayonSafari-12" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-400 hover:bg-blue-500 hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fab fa-telegram-plane text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/19X3cFsvmV/?mibextid=wwXIfr" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white hover:shadow-[0_0_15px_rgba(37,99,235,0.5)] transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- IT Skills -->
+            <div class="mb-10" data-aos="fade-right" data-aos-delay="400">
+                <h2 class="text-sm font-bold uppercase text-slate-400 tracking-widest mb-4">Additional IT Skills</h2>
+                <div class="flex flex-wrap gap-2 text-xs font-tech">
+                    <span class="bg-slate-800 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md hover:border-cyan-500 hover:text-cyan-400 transition-colors cursor-default">Windows</span>
+                    <span class="bg-slate-800 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md hover:border-cyan-500 hover:text-cyan-400 transition-colors cursor-default">MS Office 2024</span>
+                    <span class="bg-slate-800 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md hover:border-cyan-500 hover:text-cyan-400 transition-colors cursor-default">Hardware</span>
+                    <span class="bg-slate-800 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md hover:border-cyan-500 hover:text-cyan-400 transition-colors cursor-default">MS-DOS</span>
+                    <span class="bg-slate-800 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md hover:border-cyan-500 hover:text-cyan-400 transition-colors cursor-default">Tech Support</span>
+                </div>
+            </div>
+
+            <!-- Target Roles -->
+            <div data-aos="fade-right" data-aos-delay="500">
+                <h2 class="text-sm font-bold uppercase text-slate-400 tracking-widest mb-4">Target Roles</h2>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-gradient-to-r from-blue-900 to-cyan-900 border border-cyan-700/50 text-cyan-100 px-3 py-1.5 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.2)]">Network Engineer</span>
+                    <span class="bg-gradient-to-r from-blue-900 to-cyan-900 border border-cyan-700/50 text-cyan-100 px-3 py-1.5 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.2)]">NOC Engineer</span>
+                    <span class="bg-gradient-to-r from-blue-900 to-cyan-900 border border-cyan-700/50 text-cyan-100 px-3 py-1.5 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.2)]">IT Support</span>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="w-full lg:w-2/3 p-8 lg:p-12">
+            
+            <!-- Professional Profile -->
+            <section class="mb-14" data-aos="fade-up">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30 mr-4">
+                        <i class="fas fa-user-astronaut text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wide">Profile</h2>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-justify text-[15px] p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 shadow-inner">
+                    Cisco-focused networking professional with hands-on experience in enterprise network design, routing, switching, troubleshooting, and network simulation. Strong practical knowledge of Cisco technologies with experience building and testing enterprise topologies using PNETLab and GNS3. Also bring 4+ years of professional computer instruction experience, supporting users and explaining technical concepts clearly.
+                </p>
+            </section>
+
+            <!-- Core Networking Skills -->
+            <section class="mb-14" data-aos="fade-up">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30 mr-4">
+                        <i class="fas fa-network-wired text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wide">Core Skills</h2>
+                </div>
+                
+                <div class="overflow-hidden rounded-2xl border border-slate-700 bg-slate-800/40">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <tbody class="divide-y divide-slate-700/50">
+                            <tr class="hover:bg-slate-700/40 transition-colors group">
+                                <td class="py-4 pl-6 pr-4 font-semibold text-cyan-400 w-1/3 align-top border-r border-slate-700/50">
+                                    <i class="fas fa-route mr-2 opacity-50 group-hover:opacity-100 transition-opacity"></i>Routing & Switching
+                                </td>
+                                <td class="py-4 pr-6 pl-4 text-slate-300 font-tech leading-relaxed">Cisco IOS • VLAN • 802.1Q Trunking • STP/RSTP • Inter-VLAN Routing • OSPF • EIGRP • BGP • Static/Dynamic</td>
+                            </tr>
+                            <tr class="hover:bg-slate-700/40 transition-colors group">
+                                <td class="py-4 pl-6 pr-4 font-semibold text-cyan-400 align-top border-r border-slate-700/50">
+                                    <i class="fas fa-shield-alt mr-2 opacity-50 group-hover:opacity-100 transition-opacity"></i>Services & Security
+                                </td>
+                                <td class="py-4 pr-6 pl-4 text-slate-300 font-tech leading-relaxed">NAT/PAT • ACL • DHCP • DNS Fundamentals • VPN • GRE • IP SLA • TCP/IP • Troubleshooting</td>
+                            </tr>
+                            <tr class="hover:bg-slate-700/40 transition-colors group">
+                                <td class="py-4 pl-6 pr-4 font-semibold text-cyan-400 align-top border-r border-slate-700/50">
+                                    <i class="fas fa-building mr-2 opacity-50 group-hover:opacity-100 transition-opacity"></i>Enterprise Net
+                                </td>
+                                <td class="py-4 pr-6 pl-4 text-slate-300 font-tech leading-relaxed">Enterprise Design • Multi-Site Networks • ISP Connectivity • Dual-ISP Concepts • Underlay/Overlay • Redundancy</td>
+                            </tr>
+                            <tr class="hover:bg-slate-700/40 transition-colors group">
+                                <td class="py-4 pl-6 pr-4 font-semibold text-cyan-400 align-top border-r border-slate-700/50">
+                                    <i class="fas fa-laptop-code mr-2 opacity-50 group-hover:opacity-100 transition-opacity"></i>Lab & Simulation
+                                </td>
+                                <td class="py-4 pr-6 pl-4 text-slate-300 font-tech leading-relaxed">PNETLab • GNS3 • Cisco IOS • Enterprise Topologies • Practical Troubleshooting</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Experience Timeline -->
+            <section class="mb-14">
+                <div class="flex items-center mb-8" data-aos="fade-up">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30 mr-4">
+                        <i class="fas fa-briefcase text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wide">Experience</h2>
+                </div>
+                
+                <div class="relative border-l-2 border-slate-600 ml-6 pl-8 space-y-10">
+                    
+                    <!-- Job 1 -->
+                    <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                        <!-- Glowing Dot -->
+                        <div class="absolute -left-[41px] w-5 h-5 bg-slate-900 rounded-full mt-1.5 border-4 border-cyan-500 group-hover:bg-cyan-400 group-hover:shadow-[0_0_15px_#06b6d4] transition-all duration-300"></div>
+                        
+                        <div class="bg-slate-800/40 border border-slate-700/50 p-5 rounded-2xl group-hover:border-cyan-500/50 group-hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Computer Instructor</h3>
+                                <span class="inline-block mt-2 sm:mt-0 text-xs font-bold text-cyan-200 bg-cyan-900/50 border border-cyan-700/50 px-3 py-1 rounded-full whitespace-nowrap">2023 – 2024</span>
+                            </div>
+                            <h4 class="text-md font-medium text-blue-400 mb-4 flex items-center"><i class="fas fa-building mr-2 text-sm"></i>Bahar Institute</h4>
+                            <ul class="space-y-2 text-slate-300 text-sm">
+                                <li class="flex items-start"><i class="fas fa-check text-cyan-500 mt-1 mr-3 text-xs"></i><span>Delivered practical computer and IT training.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-cyan-500 mt-1 mr-3 text-xs"></i><span>Taught Microsoft Windows and Microsoft Office applications.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-cyan-500 mt-1 mr-3 text-xs"></i><span>Provided hands-on technical assistance, software installation and troubleshooting.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute -left-[41px] w-5 h-5 bg-slate-900 rounded-full mt-1.5 border-4 border-slate-500 group-hover:border-cyan-500 group-hover:bg-cyan-400 group-hover:shadow-[0_0_15px_#06b6d4] transition-all duration-300"></div>
+                        <div class="bg-slate-800/40 border border-slate-700/50 p-5 rounded-2xl group-hover:border-cyan-500/50 group-hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Computer Instructor</h3>
+                                <span class="inline-block mt-2 sm:mt-0 text-xs font-medium text-slate-400 border border-slate-600 px-3 py-1 rounded-full whitespace-nowrap">2022 – 2023</span>
+                            </div>
+                            <h4 class="text-md font-medium text-blue-400 mb-4 flex items-center"><i class="fas fa-building mr-2 text-sm"></i>Star Educational Society</h4>
+                            <ul class="space-y-2 text-slate-300 text-sm">
+                                <li class="flex items-start"><i class="fas fa-check text-cyan-500 mt-1 mr-3 text-xs"></i><span>Delivered practical computer training to students with different technical backgrounds.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-cyan-500 mt-1 mr-3 text-xs"></i><span>Taught Windows, Word, Excel and PowerPoint.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-cyan-500 mt-1 mr-3 text-xs"></i><span>Provided individual technical support and guidance.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="relative group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="absolute -left-[41px] w-5 h-5 bg-slate-900 rounded-full mt-1.5 border-4 border-slate-500 group-hover:border-cyan-500 group-hover:bg-cyan-400 group-hover:shadow-[0_0_15px_#06b6d4] transition-all duration-300"></div>
+                        <div class="bg-slate-800/40 border border-slate-700/50 p-5 rounded-2xl group-hover:border-cyan-500/50 group-hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Computer Instructor</h3>
+                                <span class="inline-block mt-2 sm:mt-0 text-xs font-medium text-slate-400 border border-slate-600 px-3 py-1 rounded-full whitespace-nowrap">2020 – 2022</span>
+                            </div>
+                            <h4 class="text-md font-medium text-blue-400 mb-4 flex items-center"><i class="fas fa-building mr-2 text-sm"></i>Kosha Private School</h4>
+                            <ul class="space-y-2 text-slate-300 text-sm">
+                                <li class="flex items-start"><i class="fas fa-check text-cyan-500 mt-1 mr-3 text-xs"></i><span>Taught Microsoft Windows and Microsoft Office applications.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-cyan-500 mt-1 mr-3 text-xs"></i><span>Delivered practical computer training and assisted students with computer-related tasks.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Projects & Hands-On -->
+            <section class="mb-14" data-aos="fade-up">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30 mr-4">
+                        <i class="fas fa-server text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wide">Projects & Hands-On</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-slate-800/50 border border-slate-700 p-5 rounded-xl hover:border-cyan-500/50 hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-sitemap text-cyan-400 text-2xl mb-3"></i>
+                        <p class="text-sm text-slate-300">Designed and configured multi-router enterprise topologies in PNETLab and GNS3.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700 p-5 rounded-xl hover:border-cyan-500/50 hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-network-wired text-cyan-400 text-2xl mb-3"></i>
+                        <p class="text-sm text-slate-300">Practiced VLAN segmentation, trunking, inter-VLAN routing, STP, OSPF, EIGRP and BGP scenarios.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700 p-5 rounded-xl hover:border-cyan-500/50 hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-shield-virus text-cyan-400 text-2xl mb-3"></i>
+                        <p class="text-sm text-slate-300">Built NAT, ACL, DHCP, VPN and GRE configurations and performed practical troubleshooting.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700 p-5 rounded-xl hover:border-cyan-500/50 hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-project-diagram text-cyan-400 text-2xl mb-3"></i>
+                        <p class="text-sm text-slate-300">Built dual-ISP scenarios, including NAT across WAN interfaces, IP SLA concepts and failover testing.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Certs -->
+            <section data-aos="fade-up">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30 mr-4">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wide">Education & Certs</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-5 border border-slate-700 rounded-xl relative overflow-hidden group hover:border-blue-500 transition-colors">
+                        <div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <i class="fas fa-certificate text-8xl"></i>
+                        </div>
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-certificate text-2xl"></i></div>
+                        <h3 class="font-bold text-white text-md">CCNP-Level Enterprise Networking</h3>
+                        <p class="text-xs text-slate-400 mt-2">Training & Hands-on Labs (ENCOR / ENARSI)</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-5 border border-slate-700 rounded-xl relative overflow-hidden group hover:border-blue-500 transition-colors">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-award text-2xl"></i></div>
+                        <h3 class="font-bold text-white text-md">Cisco CCNA 200-301</h3>
+                        <p class="text-xs text-slate-400 mt-2">Zoom Byte Academy</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-5 border border-slate-700 rounded-xl relative overflow-hidden group hover:border-blue-500 transition-colors">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-shield-check text-2xl"></i></div>
+                        <h3 class="font-bold text-white text-md">CompTIA Network+</h3>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-5 border border-slate-700 rounded-xl relative overflow-hidden group hover:border-blue-500 transition-colors">
+                        <div class="text-slate-500 mb-2"><i class="fas fa-school text-2xl"></i></div>
+                        <h3 class="font-bold text-white text-md">High School Diploma</h3>
+                        <p class="text-xs text-slate-400 mt-2">Sultani High School, Ghazni</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- AOS and Typewriter Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            once: false, 
+            mirror: true,
+            offset: 50,
+        });
+
+        // Typewriter Effect Logic for the Role
+        const texts = [
+            "Network Engineer",
+            "Cisco Specialist", 
+            "IT Infrastructure Pro",
+            "NOC Engineer"
+        ];
+        
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+        let isDeleting = false;
+        
+        const typeText = document.getElementById('typing-text');
+
+        function type() {
+            // Determine the current word to type
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            
+            // Handle deleting vs typing
+            if(isDeleting) {
+                letter = currentText.slice(0, --index);
+            } else {
+                letter = currentText.slice(0, ++index);
+            }
+            
+            typeText.textContent = letter;
+            
+            // Determine speed based on typing vs deleting
+            let typeSpeed = isDeleting ? 50 : 100;
+            
+            // Logic to switch between typing and deleting
+            if (!isDeleting && letter.length === currentText.length) {
+                // Finish typing the word, pause before deleting
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && letter.length === 0) {
+                // Finished deleting, move to next word
+                isDeleting = false;
+                count++;
+                typeSpeed = 500;
+            }
+            
+            setTimeout(type, typeSpeed);
+        }
+
+        // Start typing effect on load
+        window.addEventListener('load', () => {
+            setTimeout(type, 1000);
+        });
+    </script>
+
+</body>
+</html>
